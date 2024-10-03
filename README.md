@@ -109,4 +109,35 @@ Quellen:
 - https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html#registering-a-new-block
 
 ## 4.) Aufgabe
+
+Finde den Fehler im Plugin `SeidemannXyZy` und behebe diesen.
+
 ## 5.) Aufgabe (Optional)
+
+Da wir neben Shopware auch mit OXID eShop arbeiten, wäre das Ziel dieser Aufgabe eine lokale OXID eShop Community Edition Instanz
+bei Dir Lokal auf Deinen Rechner zu installieren.
+
+Nutze dafür die Demodaten und das Apex Theme.
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Hint: Beachte die Systemvoraussetzungen. 
+-------------------------------------------------------------------------------------------------------------------------------
+
+Beispiel:
+
+```
+cd ClientProjects
+mkdir oxid.seidemann.dev
+cd oxid.seidemann.dev
+ddev config --project-name="oxid.seidemann.dev" --project-type="php" --docroot="oxid/source" --webserver-type="apache-fpm" --php-version="8.2" --composer-version="2"
+ddev start
+ddev ssh
+rm -rf oxid/
+# composer self-update 2.2.23
+composer create-project --no-dev oxid-esales/oxideshop-project oxid dev-b-7.1-ce
+```
+
+Quellen:
+- https://docs.oxid-esales.com/eshop/de/latest/installation/neu-installation/installation-vorbereiten.html
+- https://forum.oxid-esales.com/t/erste-schritte-fur-anwender-handler-und-entwickler/98357
+- https://github.com/oxid-esales
