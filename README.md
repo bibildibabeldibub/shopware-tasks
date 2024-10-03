@@ -61,6 +61,52 @@ Passwort: db
 Datenbank-Name: db
 
 ## 2.) Aufgabe
+
+Ziel ist es das Storefront Standard Theme mit eigenem Child-Theme zu erweitern.
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Hint: Nutze die Shopware Developer Dokumentation.
+-------------------------------------------------------------------------------------------------------------------------------
+
+2a.) Nutze die CLI um Dir Plugin Theme zu generieren zu lassen.
+
+Beispiel:
+
+```
+ddev start
+ddev ssh
+cd shopware/
+bin/console theme:create SeidemannStoreTheme
+bin/console plugin:refresh
+bin/console plugin:install --activate SeidemannStoreTheme
+bin/console cache:clear
+```
+
+2b.) Erweitere...
+
+Quellen:
+- https://developer.shopware.com/
+- https://developer.shopware.com/docs/guides/plugins/themes/create-a-theme.html
+- https://developer.shopware.com/docs/guides/plugins/overview.html
+- https://www.matthias-zeis.com/shopware-6/programmieren-lernen-links-tipps-tutorials
+
 ## 3.) Aufgabe
+
+Die Hauptnavigation soll um eine neue Landingpage namens "Filiale" ergänzt werden. 
+
+Über ein neues Plugin namens `SeidemannCmsBlocks` soll ein neuer CMS Block zuweisbar sein.
+
+3a.) Lege im Admin unter den Erlebniswelten - Landingpage ein neues Layout names "Stores" an.
+
+3b.) Füge Deinen neuen CMS Block dem neuen Layout "Store" hinzu.
+
+3c.) Lege im Admin einen neuen Navigationspunkt "Filialen" an mit der Entität Landingpage.
+     Der Name der Landingpage soll "Unsere Filiale" lauten, diese Landingpage soll dem Layout "Store" zugewiesen sein.
+
+Quellen:
+- https://www.matheusgontijo.com/2022/01/24/how-to-create-a-plugin-in-shopware-6
+- https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html
+- https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html#registering-a-new-block
+
 ## 4.) Aufgabe
 ## 5.) Aufgabe (Optional)
