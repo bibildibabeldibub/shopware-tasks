@@ -94,6 +94,22 @@ Quellen:
 
 Die Hauptnavigation soll um eine neue Landingpage namens "Filiale" ergänzt werden. 
 
+Auf dieser Landingpage soll eine Karte von YellowMap mit der Anschrift der Seidemann Web GmbH eingebunden werden.
+
+Schau Dir die Quellenangabe von YellowMap mit der Anleitung an und überlege wie Du den JavaScript-Code und HTML-Code einbindest.
+
+Ein API-Key erhältst Du über die kostenfreie Registrierung unter https://www.smartmaps.net/ 
+
+Ein Screenshot wie es später im Frontend Deines Demo-Shops aussehen soll mit der Karteneinbindung ist diesem Repository beigefügt.
+
+Nutze gerne die ganze Breite aus, der Screenshot ist ein Beispiel zur Verdeutlichung der Anforderung.
+
+-------------------------------------------------------------------------------------------------------------------------------
+- Hint: Prüfe, ob sich die Anforderung "ohne" Plugin lösen lässt oder ob Du lieber ein Plugin dafür anlegen würdest.
+-------------------------------------------------------------------------------------------------------------------------------
+
+Potenzielle Lösungsvariante mithilfe von einem Plugin, indem neuer CMS Block erstellt wird.
+
 Über ein neues Plugin namens `SeidemannCmsBlocks` soll ein neuer CMS Block zuweisbar sein.
 
 3a.) Lege im Admin unter den Erlebniswelten - Landingpage ein neues Layout names "Stores" an.
@@ -107,6 +123,10 @@ Quellen:
 - https://www.matheusgontijo.com/2022/01/24/how-to-create-a-plugin-in-shopware-6
 - https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html
 - https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html#registering-a-new-block
+- https://www.yellowmap.com/
+- https://docs.yellowmap.com/howto/
+- https://docs.yellowmap.com/smartmaps-javascript/anleitung/erste-schritte/
+- https://www.smartmaps.net/
 
 ## 4.) Aufgabe (Optional)
 
