@@ -82,13 +82,30 @@ bin/console plugin:install --activate SeidemannStoreTheme
 bin/console cache:clear
 ```
 
-2b.) Erweitere...
+2b.) Verändere mithilfe des Plugin Theme die Produktdetailseite.
+
+Die Produktdetailseite soll designtechnisch sich am Vorbild des Shopy Themes https://demo.htmlhunters.com/shopy/product.html orientieren.
+
+Lade Dir dazu die 3 Produktbilder herunter und verändere zu Testzwecken das Produkt SWDEMO10007.1 oder lege ein neues Produkt an um Deine 
+Designanpassungen zu testen.
+
+Anbei habe ich Dir zwei Screenshots vom Ist- und Soll-Stand des Layouts beigefügt.
+
+Ziel ist es auf der Desktop-Ansicht die Platzierungen der Inhaltselemente zu ändern, dass die Beschreibung und Bewertung Tabs sich wie
+im Soll-Stand auf der rechten Seite befinden.
+
+Die Beschreibung und Bewertung soll wie im Soll-Stand ausklappbar sein.
+
+Orientiere Dich beim Design an das Bootstrap CSS Framework für die Design-Elemente wie z.B. das Ausklappen der Beschreibung und Bewertung.
 
 Quellen:
 - https://developer.shopware.com/
 - https://developer.shopware.com/docs/guides/plugins/themes/create-a-theme.html
 - https://developer.shopware.com/docs/guides/plugins/overview.html
 - https://www.matthias-zeis.com/shopware-6/programmieren-lernen-links-tipps-tutorials
+- https://getbootstrap.com/
+- https://themes.getbootstrap.com/product/shopy/
+- https://demo.htmlhunters.com/shopy/product.html
 
 ## 3.) Aufgabe
 
