@@ -108,11 +108,7 @@ Quellen:
 - https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html
 - https://developer.shopware.com/docs/guides/plugins/plugins/content/cms/add-cms-block.html#registering-a-new-block
 
-## 4.) Aufgabe
-
-Finde den Fehler im Plugin `SeidemannXyZy` und behebe diesen.
-
-## 5.) Aufgabe (Optional)
+## 4.) Aufgabe (Optional)
 
 Da wir neben Shopware auch mit OXID eShop arbeiten, wäre das Ziel dieser Aufgabe eine lokale OXID eShop Community Edition Instanz
 bei Dir Lokal auf Deinen Rechner zu installieren.
