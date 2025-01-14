@@ -1,0 +1,29 @@
+services:
+  shopware:
+    image: dockware/dev:latest
+    container_name: shopware
+    volumes:
+      - "./shopware:/var/www/html"
+      - "db_volume:/var/lib/mysql"
+    ports:
+      - "80:80"
+      - "22:22"
+      - "9998:9998"
+      - "9999:9999"
+      - "8888:8888"
+    networks:
+      - web
+  adminer:
+    image: adminer
+    ports:
+      - '6580:8080'
+    networks:
+      - web
+
+volumes:
+  db_volume:
+    driver: local
+
+networks:
+  web:
+    external: false
