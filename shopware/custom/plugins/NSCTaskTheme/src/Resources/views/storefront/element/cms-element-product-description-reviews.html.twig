@@ -1,0 +1,77 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-product-description-reviews.html.twig' %}
+
+{% block element_product_description_reviews %}
+    {% set config = element.fieldConfig.elements %}
+    {% set product = element.data.product %}
+    {% set descriptionTabId = "description-tab-" ~ product.id %}
+    {% set descriptionTabHref = "#description-tab-" ~ product.id ~ "-pane" %}
+    {% set descriptionTabContent = "description-tab-" ~ product.id ~ "-pane" %}
+    {% set reviewTabId = "review-tab-" ~ product.id %}
+    {% set reviewTabHref = "#review-tab-" ~ product.id ~ "-pane" %}
+    {% set reviewTabContent = "review-tab-" ~ product.id ~ "-pane" %}
+
+    <div class="accordion"
+         id="product-detail-accordion">
+        {% block element_product_description_reviews_tabs_navigation_description %}
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <a class="accordion-button {% if (ratingSuccess != 1) and (ratingSuccess != -1) %}active{% endif %}"
+                       id="{{ descriptionTabId }}"
+                       data-bs-toggle="collapse"
+                       data-off-canvas-tabs="true"
+                       href="{{ descriptionTabHref }}"
+                       role="tab"
+                       aria-controls="{{ descriptionTabContent }}"
+                       aria-selected="true">
+                        <span>{{ "detail.tabsDescription"|trans|sw_sanitize }}</span>
+                    </a>
+                </h2>
+
+                {% block element_product_description_reviews_tabs_content_description %}
+                    <div class="accordion-body collapse show {% if (element.data.ratingSuccess != 1) and (element.data.ratingSuccess != -1) %}active{% endif %}"
+                         id="{{ descriptionTabContent }}"
+                         role="tabpanel"
+                         aria-labelledby="{{ descriptionTabId }}">
+                        {% sw_include '@Storefront/storefront/custom/product/description.html.twig' with {
+                            product: element.data.product
+                        } %}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block element_product_description_reviews_tabs_navigation_review %}
+            {% if config('core.listing.showReview') %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <a class="accordion-button {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} "
+                           id="{{ reviewTabId }}"
+                           data-bs-toggle="collapse"
+                           data-off-canvas-tabs="true"
+                           href="{{ reviewTabHref }}"
+                           aria-controls="{{ reviewTabContent }}"
+                           aria-selected="true">
+                            {{ "detail.tabsReview"|trans|sw_sanitize }}
+                            <span class="product-detail-tab-navigation-icon">
+                            {% sw_icon 'arrow-medium-down' style {'pack':'solid'} %}
+                        </span>
+                        </a>
+                    </h2>
+
+                    {% block element_product_description_reviews_tabs_content_review %}
+                        {% if config('core.listing.showReview') %}
+                            <div class="accordion-body collapse show {% if (element.data.ratingSuccess == 1) or (element.data.ratingSuccess == -1) %}active{% endif %}"
+                                 id="{{ reviewTabContent }}"
+                                 aria-labelledby="{{ reviewTabId }}">
+                                {% sw_include '@NSCTaskTheme/storefront/custom/review/review.html.twig' with {
+                                    reviews: element.data.reviews,
+                                    product: element.data.product
+                                } %}
+                            </div>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}

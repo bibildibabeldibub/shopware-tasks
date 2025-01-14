@@ -15,3 +15,4 @@ volumes can't be mounted to empty directories so for the first docker-compose up
 |---------|----------|----------|
 | Admin   | admin    | shopware |
 | MySQL   | root     | root     |
+
