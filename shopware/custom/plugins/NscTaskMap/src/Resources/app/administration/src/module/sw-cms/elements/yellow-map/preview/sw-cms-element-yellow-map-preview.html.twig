@@ -1,0 +1,25 @@
+{% block nsc_element_yellow_map_preview %}
+    <div class="preview-map-container">
+        <div id="map-wrapper">
+            <!-- Vordefiniertes DIV-Element, in das die Karte geladen wird. -->
+            <div id="map" style="width: 500px; height: 300px;"></div>
+        </div>
+
+        <!-- SmartMaps API -->
+        <!-- Hier muss Ihr persönliches API-Key integriert werden -->
+        {# todo add apiKey #}
+        <script src="https://www.yellowmap.de/api_rst/api/loader?libraries=free-3&apiKey="></script>
+        <script>
+            ym.ready(function (modules) {
+                var map = ym.map("map", {
+                    // Geographische Länge und Breite definieren.
+                    center: ym.latLng(48.487845157908886, 9.220035057122708),
+                    // Zoomstufe festlegen.
+                    zoom: 12
+                });
+                window.map = map;
+            });
+        </script>
+
+    </div>
+{% endblock %}

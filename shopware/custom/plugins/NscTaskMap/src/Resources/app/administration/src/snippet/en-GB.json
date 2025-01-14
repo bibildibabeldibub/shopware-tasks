@@ -1,0 +1,9 @@
+{
+  "nsc-cms": {
+    "elements": {
+      "yellowMap": {
+        "label": "Map"
+      }
+    }
+  }
+}
