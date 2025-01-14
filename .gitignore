@@ -26,3 +26,4 @@
 /db_volume/server-key.pem
 /db_volume/undo_001
 /db_volume/undo_002
+/shopware/.htaccess.watch

@@ -44,7 +44,7 @@
             {% if config('core.listing.showReview') %}
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <a class="accordion-button {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} "
+                        <a class="accordion-button {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}collapse{% else %}collapsed{% endif %} "
                            id="{{ reviewTabId }}"
                            data-bs-toggle="collapse"
                            data-off-canvas-tabs="true"
@@ -60,7 +60,7 @@
 
                     {% block element_product_description_reviews_tabs_content_review %}
                         {% if config('core.listing.showReview') %}
-                            <div class="accordion-body collapse show {% if (element.data.ratingSuccess == 1) or (element.data.ratingSuccess == -1) %}active{% endif %}"
+                            <div class="accordion-body collapse {% if (element.data.ratingSuccess == 1) or (element.data.ratingSuccess == -1) %}show{% endif %}"
                                  id="{{ reviewTabContent }}"
                                  aria-labelledby="{{ reviewTabId }}">
                                 {% sw_include '@NSCTaskTheme/storefront/custom/review/review.html.twig' with {
