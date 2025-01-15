@@ -1,0 +1,1 @@
+"use strict";(window["webpackJsonpPluginnsc-task-map"]=window["webpackJsonpPluginnsc-task-map"]||[]).push([[595],{595:function(n,a,e){e.r(a),e.d(a,{default:function(){return o}});var o={template:'{% block yellow_map_preview %}\n    <div class="yellow-map-preview">\n        <h1>Yellow-Map</h1>\n    </div>\n{% endblock %}',compatConfig:Shopware.compatConfig}}}]);
