@@ -1,0 +1,1 @@
+"use strict";(window["webpackJsonpPluginseidemann-cms-blocks"]=window["webpackJsonpPluginseidemann-cms-blocks"]||[]).push([[221],{221:function(n,e,o){o.r(e),o.d(e,{default:function(){return i}});var i={template:'{% block yellow_map_preview %}\n    <div class="yellow-map-preview">\n        <h1>Yellow-Map</h1>\n    </div>\n{% endblock %}',compatConfig:Shopware.compatConfig}}}]);

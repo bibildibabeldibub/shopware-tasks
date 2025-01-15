@@ -1,0 +1,27 @@
+{
+    "name": "nsc-task-map/nsc-task-map",
+    "description": "nsc-task-map/nsc-task-map",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "SeidemannCmsBlocks\\SeidemannCmsBlocks",
+        "label": {
+            "de-DE": "Seidemann CMS",
+            "en-GB": "Seidemann CMS"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SeidemannCmsBlocks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SeidemannCmsBlocks\\Tests\\": "tests/"
+        }
+    }
+}

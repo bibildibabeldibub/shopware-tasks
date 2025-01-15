@@ -1,0 +1,1 @@
+"use strict";(window["webpackJsonpPluginseidemann-cms-blocks"]=window["webpackJsonpPluginseidemann-cms-blocks"]||[]).push([[481],{481:function(n,s,e){e.r(s),e.d(s,{default:function(){return l}});var l={template:'{% block sw_cms_block_yellow_map %}\n    <div class="sw-cms-block-yellow-map">\n        <slot name="mapCenter"></slot>\n    </div>\n{% endblock %}\n'}}}]);
