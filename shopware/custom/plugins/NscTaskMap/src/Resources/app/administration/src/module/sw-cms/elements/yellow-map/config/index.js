@@ -27,9 +27,7 @@ export default {
 
     methods: {
         createdComponent() {
-            console.log('createdComponent')
             this.initElementConfig('nsc-yellow-map');
-            console.log(this.element.config)
         },
         onLatitudeUpdate(value) {
             this.element.config.latitude.value = value;
