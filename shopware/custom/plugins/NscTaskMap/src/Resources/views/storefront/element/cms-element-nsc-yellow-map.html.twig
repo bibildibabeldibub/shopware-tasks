@@ -1,8 +1,7 @@
 {% block yellow_map_entry %}
-    <h1>Yellow-Map</h1>
     <div id="map-wrapper">
         <!-- Vordefiniertes DIV-Element, in das die Karte geladen wird. -->
-        <div id="map" style="width: 500px; height: 300px;"></div>
+        <div id="map" style="width: 100%; height: 500px;"></div>
     </div>
 
     <!-- SmartMaps API -->
@@ -12,9 +11,9 @@
         ym.ready(function(modules) {
             var map = ym.map("map", {
                 // Geographische Länge und Breite definieren.
-                center: ym.latLng(50.095685, 8.690445),
+                center: ym.latLng({{ element.config.latitude.value }}, {{ element.config.longitude.value }}),
                 // Zoomstufe festlegen.
-                zoom: 12
+                zoom: {{ element.config.zoom.value }}
             });
             window.map = map;
         });
