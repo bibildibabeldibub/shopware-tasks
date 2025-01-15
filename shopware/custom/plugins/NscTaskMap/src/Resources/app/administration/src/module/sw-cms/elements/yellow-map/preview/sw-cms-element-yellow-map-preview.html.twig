@@ -8,18 +8,8 @@
         <!-- SmartMaps API -->
         <!-- Hier muss Ihr persönliches API-Key integriert werden -->
         {# todo add apiKey #}
-        <script src="https://www.yellowmap.de/api_rst/api/loader?libraries=free-3&apiKey="></script>
-        <script>
-            ym.ready(function (modules) {
-                var map = ym.map("map", {
-                    // Geographische Länge und Breite definieren.
-                    center: ym.latLng(48.487845157908886, 9.220035057122708),
-                    // Zoomstufe festlegen.
-                    zoom: 12
-                });
-                window.map = map;
-            });
-        </script>
+        {#<iframe src="https://location.smartmaps.app/?key={HIER API_KEY EINBINDEN}&x=8.43986&y=49.02111&str=CAS-Weg&zp=76131&hsn=3&cty=Karlsruhe&c=%2318355b&z=16&zc=topleft&hp=true" style="height: 100%; width: 100%; border: 0;" title="SmartMaps"></iframe>#}
 
+        <h1>Preview</h1>
     </div>
 {% endblock %}

@@ -11,7 +11,7 @@ export default {
     ],
 
     mixins: [
-        Mixin.getByName('cms-element'),
+        'cms-element'
     ],
 
     data() {
@@ -21,13 +21,18 @@ export default {
     },
 
     created() {
-        this.initElementConfig('nsc-yellow-map');
+        this.createdComponent();
     },
 
 
     methods: {
+        createdComponent() {
+            console.log('createdComponent')
+            this.initElementConfig('nsc-yellow-map');
+            console.log(this.element.config)
+        },
         onLatitudeUpdate(value) {
-            this.element.config.zoom.value = value;
+            this.element.config.latitude.value = value;
         },
         onLongitudeUpdate(value) {
             this.element.config.longitude.value = value;

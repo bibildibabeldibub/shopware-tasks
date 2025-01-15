@@ -4,9 +4,15 @@ import './sw-cms-element-yellow-map-preview.scss';
 export default {
     template,
 
+    inject: ['systemConfigApiService'],
+
+    mixins: [
+        'cms-element'
+    ],
+
     data() {
         return {
-            boxLimit: 8
+            apiKey: ''
         };
     },
 
@@ -16,7 +22,23 @@ export default {
         },
 
         mapUrl() {
-            return "https://www.yellowmap.de/api_rst/api/loader?libraries=free-3&apiKey=" /*todo add apiKey from sysConfig*/;
+            return "https://location.smartmaps.app/?key=" + this.apiKey + "&x=" + this.element.config.latitude?.value + "&y=" + this.element.config.longitude?.value + "&str=CAS-Weg&zp=76131&hsn=3&cty=Karlsruhe&c=%2318355b&z=16&zc=topleft&hp=true";
+        }
+    },
+
+    created() {
+        this.createdComponent();
+    },
+
+    methods: {
+        createdComponent() {
+            this.initElementConfig('nsc-yellow-map');
+            this.getPluginConfig();
+        },
+
+        async getPluginConfig() {
+            const response = await this.systemConfigApiService.getValues('NscTaskMap.config');
+            this.apiKey = response['NscTaskMap.config.apiKey'];
         }
     }
 }

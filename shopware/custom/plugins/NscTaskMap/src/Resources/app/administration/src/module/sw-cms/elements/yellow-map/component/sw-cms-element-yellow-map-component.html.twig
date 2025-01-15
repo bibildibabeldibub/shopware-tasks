@@ -1,26 +1,14 @@
 {% block nsc_element_yellow_map_component %}
     {% block nsc_element_yellow_map_preview %}
         <div class="preview-map-container">
-            <div id="map-wrapper">
-                <!-- Vordefiniertes DIV-Element, in das die Karte geladen wird. -->
-                <div id="map" style=""></div>
-            </div>
+            <h1>Test</h1>
 
             <!-- SmartMaps API -->
             <!-- Hier muss Ihr persönliches API-Key integriert werden -->
             {# todo add apiKey #}
-            <script :src="mapUrl"></script>
-            <script>
-                ym.ready(function (modules) {
-                    var map = ym.map("map", {
-                        // Geographische Länge und Breite definieren.
-                        center: ym.latLng({{ element.config.latitude?.value }}, {{ element.config.longitude?.value }}),
-                        // Zoomstufe festlegen.
-                        zoom: 12
-                    });
-                    window.map = map;
-                });
-            </script>
+
+            <iframe :src="mapUrl"
+                    style="height: 100%; min-height: 250px; width: 100%; border: 0;" title="SmartMaps"></iframe>
 
         </div>
     {% endblock %}
